@@ -1,0 +1,163 @@
+﻿@charset "utf-8";
+
+* { margin:0; padding:0; }
+li { list-style-type:none; }
+a { text-decoration:none; color:#666; }
+img { border:none; vertical-align:none; }
+em, address { font-style:normal; }
+input { vertical-align:none; }
+
+
+body {font-size:16px; font-family:"TAEBAEK milkyway"; background:#E5BEEC;}
+
+
+#wrapper {width:100%;  margin:0 auto; }
+
+/*header*/
+header {display:flex; align-items:center; justify-content:space-between; background-color:#FDE2F3; width:100%; height:100px; }
+
+	.logo { position:absolute; right:85%;}
+		.logo img { width:150px; height:auto;}
+		
+nav { position : absolute; text-align : center; top : 40px; right : 2%; }
+	nav ul { list-style:none;  width:600px; padding:0; height:100px; }
+		nav ul li { float:left; margin-right:40px;}
+			nav ul li:nth-child(1) { margin-right:20px;}
+			nav ul li a { display:inline-block; width:100px; color:black; text-decoration:none; font-size:16px; font-weight:bold; text-align:center;}
+.hamburger {display:none; cursor:pointer; font-size:inherit; color:inherit; text-transform:none; background-color:transparent; transition-property:opacity, filter; transition-duration:0.15s; transition-timing-function: linear; border:0; margin:0; overflow:visible; position:absolute; top:; right:; z-index:101; }
+
+.hamburger:hover {opacity:0.7;}
+
+.hamburger-box { width:30px; height:20px; display:inline-block; position:relative;}
+
+  .hamburger-box {width: 30px; height: 20px; display: inline-block; position: relative; }
+  
+   .hamburger-inner {display: block; top: 50%; margin-top: -2px; }
+   
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { width: 30px;  height: 4px;background-color: #000;  border-radius: 4px;  position: absolute;  transition-property: transform; transition-duration: 0.15s; transition-timing-function: ease; }
+	.hamburger-inner::before, .hamburger-inner::after { content: "";  display: block; }
+	.hamburger-inner::before {  top: -10px; }
+	.hamburger-inner::after {  bottom: -10px; }
+
+.hamburger--spin .hamburger-inner {transition-duration: 0.3s;	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+	.hamburger--spin .hamburger-inner::before {  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in; }
+	.hamburger--spin .hamburger-inner::after {  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  
+  .hamburger--spin.is-active .hamburger-inner {transform: rotate(225deg);	transition-delay: 0.14s;	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+	.hamburger--spin.is-active .hamburger-inner::before {  top: 0;  opacity: 0;  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out; }
+	.hamburger--spin.is-active .hamburger-inner::after {  bottom: 0;  transform: rotate(-90deg);  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1); }
+	
+	.call { display:none; }
+		.call a { float:left;}
+		 .call a img { width:32px; height:32px; margin-left:20px;}
+	
+	/* header 끝 */
+	
+	/* container 시작 */
+	#container { width:100%; }
+		
+		.pic {width:100%; height:680px; position: relative; background:url("../images/2_a.jpg") no-repeat center/cover; }
+		
+		.theme-head	{text-align:center; margin-top:100px;}
+			.theme-head p { width:55px; border-top:1px solid #917FB3; margin:0 auto; margin-bottom:15px;}
+			.theme-head h2 { font-size:35px; letter-spacing:2px;}
+			
+		.theme-main { width:96%; height:600px; margin:1.3888% auto; }
+			.theme-main li {float:left; width:20%; }
+				.theme-main li img { width:90%;}
+				.theme-main li h3, p { text-align:center; margin-top:10px; padding-right:25px;}
+				.theme-main li h3 { font-size:1.5em; }
+				.theme-main p { font-weight:bold; font-size:0.8em;}
+				.doggo, .fullmoon, .spin, .last, .young { position:relative;}
+			
+			.level, .star { font-weight:bold; font-size: 1em; margin:25px 0 0 0;}
+			.level {position:absolute; top:100%; left:6%; }
+			.star { position:absolute; top:100%; left: 68%;}
+			
+			.theme-main .img-wrapper { position:relative;}
+			
+			.theme-main .img-wrapper img {display:block; width:90%;}
+			
+			.theme-main .info { display:none; position:absolute; bottom:0; left:0; width:90%; height:100%; background-color: rgba(0, 0, 0, 0.5);
+			}
+			
+			.theme-main .details { display:flex; flex-direction:column; justify-content:center; align-items:center; height:calc(100% - 50px); }
+			
+			.theme-main .details div { color:#fff; line-height:25px; font-weight:bold;}
+			
+			.theme-main .reserve { display:block; width:100%; height:50px; margin:0 auto; background-color:#800080; color:#fff; font-weight:bold; font-size:1.1em; cursor:pointer;}
+			
+			/* notice 시작 */
+			
+			#notice {width:100%; background-color:#FDE2F3;}
+			
+			.notice-head	{text-align:center; margin-top:100px; padding-top:50px;}
+			.notice-head p { width:55px; border-top:1px solid #917FB3; margin:0 auto; margin-bottom:15px;}
+			.notice-head h2 { font-size:35px; letter-spacing:2px; margin-bottom:25px;}
+			.notice-head span { font-weight:bold; }
+			
+			.notice-main { width:90%; height:600px; margin:1.3888% auto; margin-top:70px;}
+			.notice-main li {float:left; width:25%; }
+			.notice-main li img { width:60%;}
+			
+			.circle { width: 220px; height:30px; background-color:black; border-radius:20px; line-height:30px; margin:25px auto;}
+			.circle p {color:white; font-weight:bold;  font-size:1.3em; padding-left:20px;}
+			.one, .two, .thr, .four { text-align:center;}
+			.one span, .two span, .thr span, .four span { font-size:1.2em; font-weight:bold; line-height:1.3em; width:260px; display:inline-block;}
+			
+			/* notice 끝 */
+			
+			footer {width:100%; height:200px; margin:-20px 0 0 0;}
+			footer p {height:50px; line-height:40px; font-weight:bold;}
+			address { text-align:center; margin-top:30px; font-weight:bold; line-height:20px;}
+			
+			
+			
+			@media all and (max-width:760px) { /*760px 스마트폰용*/
+				.logo { left:50%; margin-left:-90px; }
+				nav { display:none; position:absolute; top:100px; right:0; width:100%; background-color:#fde2f3; z-index:999;}
+				nav ul {display:block;  width:100%;}
+				nav ul li {display:block; width:100%; height:100px; line-height:100px; border-top: 1px solid #000; text-align:center;}
+				nav ul li a { font-size:1.2em;}
+				.call {display:block; position:absolute; right:90%;}
+				.hamburger { display:block; left:90%;}
+				
+				.pic {background:url("../images/2_b.jpg") no-repeat center/cover;}
+				
+				#container {height:100%; overflow:hidden;}
+				.theme-main li {float:auto; width:50%;  margin:1.3888% auto; text-align:center; margin-bottom:50px;}
+				.theme-main h3, p {margin-left:20px;}
+				
+				#notice { height:100%; overflow:hidden; margin-bottom:20px;}
+				.notice-main li { float:auto; width:96%; margin:1.3888% auto; text-align:center;}
+				.notice-main li img { width:40%;}
+				.notice-main li span { font-size:1.1em;}
+				.circle p {padding-left:10px;}
+				
+				footer {clear:both;}
+										
+			}
+			
+			@media all and (min-width:761px) and (max-width : 1200px) { /*화면 너비 : 761px~1123px(태블릿용)*/
+				.logo {left:4%;}
+				nav { position : absolute; text-align : center; top : 40px; right : 1%;  display:block !important;}
+				nav ul { list-style:none; width:500px; padding:0; height:100px; }
+				nav ul li { float:left; margin-right:20px;}
+				nav ul li:nth-child(1) { margin-right:5px;}
+				nav ul li a { display:inline-block; width:100px; color:black; text-decoration:none; font-size:1em; font-weight:bold; text-align:center;}
+				
+				#container {height:100%; overflow:hidden;}		
+				.theme-main li {float:auto; width:33%;  margin:1.3888% auto; text-align:center; margin-bottom:80px;}
+				.theme-main h3, p {margin-left:20px;}
+				
+				#notice { height:100%; overflow:hidden; margin-bottom:20px;}
+				.notice-head {margin-top:-10px;}
+				.notice-main li { float:auto; width:49%; height:65%; margin:1.3888% auto; text-align:center;}
+				.notice-main li img { width:45%;}
+				.notice-main li span { font-size:1.1em;}
+				.circle p {color:white; font-weight:bold; font-size:1.3em; padding-left:10px;}
+			}
+			
+			@media all and (min-width : 1201px){	/* 1201px pc용 */
+				nav { display:block !important;}
+			}
